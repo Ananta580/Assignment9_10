@@ -46,4 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("blue").addEventListener("click", () => {
     color = "#2979FF";
   });
+
+  // For Yellow color
+  document.getElementById("yellow").addEventListener("click", () => {
+    color = "#FFD600";
+  });
 });
