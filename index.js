@@ -52,6 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
     color = "#FFD600";
   });
 
+  document.getElementById("slider").addEventListener("input", () => {
+    brushSize = document.getElementById("slider").value;
+    document.getElementById("brushSize").textContent = brushSize;
+  });
+
   // For clearing the paint
   document.getElementById("new").addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
