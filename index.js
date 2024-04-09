@@ -41,4 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("pink").addEventListener("click", () => {
     color = "#F50057";
   });
+
+  // For Blue color
+  document.getElementById("blue").addEventListener("click", () => {
+    color = "#2979FF";
+  });
 });
