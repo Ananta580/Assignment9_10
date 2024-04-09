@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     color = "#FFD600";
   });
 
+  // For slider
   document.getElementById("slider").addEventListener("input", () => {
     brushSize = document.getElementById("slider").value;
     document.getElementById("brushSize").textContent = brushSize;
@@ -60,5 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // For clearing the paint
   document.getElementById("new").addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+  });
+
+  // For eraser
+  document.getElementById("erase").addEventListener("click", () => {
+    color = "white";
   });
 });
