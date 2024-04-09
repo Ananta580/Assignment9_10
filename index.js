@@ -31,4 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
   canvas.addEventListener("mousemove", drawShape);
   canvas.addEventListener("mouseup", () => (isDrawing = false));
   canvas.addEventListener("mouseout", () => (isDrawing = false));
+
+  // For Black color
+  document.getElementById("black").addEventListener("click", () => {
+    color = "black";
+  });
 });
