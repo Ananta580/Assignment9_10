@@ -51,4 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("yellow").addEventListener("click", () => {
     color = "#FFD600";
   });
+
+  // For clearing the paint
+  document.getElementById("new").addEventListener("click", () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  });
 });
