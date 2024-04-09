@@ -36,4 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("black").addEventListener("click", () => {
     color = "black";
   });
+
+  // For Pink color
+  document.getElementById("pink").addEventListener("click", () => {
+    color = "#F50057";
+  });
 });
