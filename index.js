@@ -10,4 +10,25 @@ document.addEventListener("DOMContentLoaded", function () {
   let brushSize = 5;
   // Initial color set to pink
   let color = "#F50057";
+
+  function drawShape(e) {
+    if (!isDrawing) return;
+    ctx.strokeStyle = color;
+    ctx.lineWidth = brushSize;
+    ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+  }
+
+  canvas.addEventListener("mousedown", (e) => {
+    isDrawing = true;
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+  });
+
+  canvas.addEventListener("mousemove", drawShape);
+  canvas.addEventListener("mouseup", () => (isDrawing = false));
+  canvas.addEventListener("mouseout", () => (isDrawing = false));
 });
